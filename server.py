@@ -10,9 +10,10 @@ class Response(Resource):
     def get(self):
         return {"data": "you are great"}
 
-    def post(self, data):
-        print(request.form)
-        return
+    def post(self):
+        data = request.form['text']
+        print(data)
+        return{}
 
 
 api.add_resource(Response, "/")
